@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How does the internet work</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <h1>How does the internet work</h1>
+    <div id="main">
+      <div id="leftside">
+        <ul id="nav">
+          <li>
+            <a href="#part1"> A brief history </a>
+          </li>
+          <li><a href="#part2"> How does the internet work </a></li>
+          <li>
+            <a href="#part3"> What happens when you surf the internet </a>
+          </li>
+          <li>
+            <a href="#part4"> What is the Internet Protocol (IP) </a>
+          </li>
+          <li><a href="#part5"> What is an IP address ?</a></li>
+          <li><a href="#part6"> How does IP routing work ?</a></li>
+          <li><a href="#part7"> DNS servers</a></li>
+          <li><a href="#part8"> What is a Router?</a></li>
+        </ul>
+      </div>
+      <div id="rightside">
+        <img
+          id="part1"
+          src="./assets/Asset 1.jpg"
+          alt="A brief history of internet"
+        />
+        <img
+          id="part2"
+          src="./assets/Asset 2.jpg"
+          alt="how does the internet work"
+        />
+        <img
+          id="part3"
+          src="./assets/Asset 3.jpg"
+          alt="what happens when you surf the internet"
+        />
+
+        <section id="part4">
+          <h2>What is the Internet Protocol (IP)?</h2>
+          <p>
+            The Internet Protocol (IP) is a protocol, or set of rules, for
+            routing and addressing packets of data so that they can travel
+            across networks and arrive at the correct destination. Data
+            traversing the Internet is divided into smaller pieces, called
+            packets. IP information is attached to each packet, and this
+            information helps routers to send packets to the right place. Every
+            device or domain that connects to the Internet is assigned an IP
+            address, and as packets are directed to the IP address attached to
+            them, data arrives where it is needed. Once the packets arrive at
+            their destination, they are handled differently depending on which
+            transport protocol is used in combination with IP. The most common
+            transport protocols are TCP and UDP.
+          </p>
+          <h3
+            style="margin-left: 20px; padding-bottom: 0px; margin-bottom: 5px"
+          >
+            What is a network protocol?
+          </h3>
+          <p>
+            In networking, a protocol is a standardized way of doing certain
+            actions and formatting data so that two or more devices are able to
+            communicate with and understand each other. To understand why
+            protocols are necessary, consider the process of mailing a letter.
+            On the envelope, addresses are written in the following order: name,
+            street address, city, state, and zip code. If an envelope is dropped
+            into a mailbox with the zip code written first, followed by the
+            street address, followed by the state, and so on, the post office
+            won't deliver it. There is an agreed-upon protocol for writing
+            addresses in order for the postal system to work. In the same way,
+            all IP data packets must present certain information in a certain
+            order, and all IP addresses follow a standardized format.
+          </p>
+        </section>
+        <section id="part5">
+          <h2>What is an IP address? How does IP addressing work?</h2>
+          <p>
+            An IP address is a unique identifier assigned to a device or domain
+            that connects to the Internet. Each IP address is a series of
+            characters, such as '192.168.1.1'. Via DNS resolvers, which
+            translate human-readable domain names into IP addresses, users are
+            able to access websites without memorizing this complex series of
+            characters. Each IP packet will contain both the IP address of the
+            device or domain sending the packet and the IP address of the
+            intended recipient, much like how both the destination address and
+            the return address are included on a piece of mail.
+          </p>
+          <img
+            id="packetFigure"
+            src="https://images.ctfassets.net/slt3lc6tev37/4tzfU9Y5ows0uT3u4GUlWr/9d4eaa83ce372454cc14d5fec83fb5b1/internet_protocol_ip_address_diagram.svg"
+            alt="IP address gets packets to their destination"
+          />
+        </section>
+        <section id="part6">
+          <h2>How does IP routing work?</h2>
+          <p>
+            The Internet is made up of interconnected large networks that are
+            each responsible for certain blocks of IP addresses; these large
+            networks are known as autonomous systems (AS). A variety of routing
+            protocols, including BGP, help route packets across ASes based on
+            their destination IP addresses. Routers have routing tables that
+            indicate which ASes the packets should travel through in order to
+            reach the desired destination as quickly as possible. Packets travel
+            from AS to AS until they reach one that claims responsibility for
+            the targeted IP address. That AS then internally routes the packets
+            to the destination. Protocols attach packet headers at different
+            layers of the OSI model:
+          </p>
+          <img
+            src="https://images.ctfassets.net/slt3lc6tev37/6htPEWbcCRIv5FMhWKYy0m/ef16a86a38a638e8fed01c326f8211f1/protocol_headers.svg"
+            alt="IP address gets packets to their destination"
+            style="width: 70%; height: 350px; padding-bottom: 5px"
+          />
+          <p style="padding-top: 0px">
+            Packets can take different routes to the same place if necessary,
+            just as a group of people driving to an agreed-upon destination can
+            take different roads to get there.
+          </p>
+        </section>
+        <section id="part7">
+          <h2>DNS servers</h2>
+          <p>
+            The Domain Name System (DNS) makes the modern internet possible. The
+            DNS pairs website names you can easily remember with IP addresses
+            that computers can use. IPv4 addresses are every bit as valid as a
+            website’s alphabetical name. You can type 157.240.22.35 into your
+            web browser, and it’ll take you to Facebook. But who’s going to
+            remember that? Most of us barely remember our own phone numbers.
+            Familiar domain names are substitutes for real IP addresses. In the
+            early days of the internet, you could connect to another site only
+            by typing in the numbers of its IP address. But thanks to the DNS,
+            we don't need to do this anymore. The DNS freed us from the headache
+            of remembering IP addresses by giving each site a name. DNS servers
+            sit between your browser and the site you want to visit. When you
+            type a URL into your browser, your browser looks up that domain name
+            in the DNS server, retrieves the corresponding IP address, and sends
+            you to the site you want. All without you, the user, needing to do a
+            thing.
+          </p>
+        </section>
+        <section id="part8">
+          <h2>What is a Router?</h2>
+          <p>
+            Routers are networking devices operating at layer 3 or a network
+            layer of the OSI model. They are responsible for receiving,
+            analyzing, and forwarding data packets among the connected computer
+            networks. When a data packet arrives, the router inspects the
+            destination address, consults its routing tables to decide the
+            optimal route and then transfers the packet along this route.
+          </p>
+          <img
+            id="router_image"
+            src="https://circuitglobe.com/wp-content/uploads/2020/06/router.jpg"
+            alt="Router connecting two networks"
+          />
+          <h3>Features of Routers:</h3>
+          <ul id="router_list">
+            <li>A router is a layer 3 or network layer device.</li>
+
+            <li>
+              It connects different networks together and sends data packets
+              from one network to another.
+            </li>
+
+            <li>
+              A router can be used both in LANs (Local Area Networks) and WANs
+              (Wide Area Networks).
+            </li>
+
+            <li>
+              It transfers data in the form of IP packets. In order to transmit
+              data, it uses IP address mentioned in the destination field <br />
+              of the IP packet.
+            </li>
+
+            <li>
+              Routers have a routing table in it that is refreshed periodically
+              according to the changes in the network. In order to transmit
+              <br />
+              data packets, it consults the table and uses a routing protocol.
+            </li>
+
+            <li>
+              In order to prepare or refresh the routing table, routers share
+              information among each other.
+            </li>
+
+            <li>Routers provide protection against broadcast storms.</li>
+
+            <li>
+              Routers are more expensive than other networking devices like
+              hubs,bridges and switches.
+            </li>
+          </ul>
+          <br />
+          <br />
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
