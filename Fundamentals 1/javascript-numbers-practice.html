@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS numbers practice</title>
+  </head>
+  <body>
+    <script>
+      console.clear();
+      // ------------------1
+      console.log(23 + 97);
+
+      // ----------------- 2
+      console.log(" ");
+      console.log(22);
+      console.log(08);
+      console.log(12, 13, 18, -55);
+
+      //-----------------  3
+      console.log((4 + 6 + 9) / 77);
+
+      // --------------    4
+      let a = 10;
+      console.log(a);
+      console.log(9 * a);
+      let b = 7 * a;
+      console.log(b);
+
+      // -------------------5
+      const max = 57;
+      let actual = max - 13;
+      let percentage = actual / max;
+      console.log(percentage);
+
+      // -------------------- 6
+      //----------------------Savings Account at  (javascript-numbers-practice2) file
+
+      // ---------------- Calculate Grade Average:
+      let sumA = 0,
+        sumB = 0,
+        i;
+      let studentMarksA = [6, 7, 5, 8, 4, 7];
+      let studentMarksB = [4, 9, 5, 5, 6, 4];
+      for (i = 0; i < studentMarksA.length; i++) {
+        sumA = sumA + studentMarksA[i];
+        sumB = sumB + studentMarksB[i];
+      }
+      let averageA = sumA / studentMarksA.length;
+      let averageB = sumB / studentMarksB.length;
+      console.log(averageA);
+      console.log(averageB);
+
+      // Real life scenario, calculating burned calories during walking
+      let weight = prompt("Enter your weight in Kilograms"); // in Kg
+      const constant1 = 0.035,
+        constant2 = 0.029;
+      let walkingSpeed = prompt("Enter your speed in (Meters per seconds)"); // meter/sec
+      let velocity = walkingSpeed ** 2; // in (m/s^2)
+      let height = prompt("Enter your height in Meters for example 1.75");
+      let burnedCalories =
+        constant1 * weight + (velocity / height) * constant2 * weight;
+      console.log(burnedCalories);
+      document.write(
+        "Your burned calories are = " + burnedCalories + " calories per minute"
+      );
+    </script>
+  </body>
+</html>
