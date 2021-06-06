@@ -2,8 +2,8 @@
 // let balance = document.getElementById("amount").value;
 
 // --------------------------with prompt method
-// let balance = prompt("Please enter your balance:");
-let balance = 600;
+let balance = prompt("Please enter your balance:");
+// let balance = 600;
 const yearly_interest = 0.05;
 let increase = balance * yearly_interest; // 600 * 0.05 = 30
 console.log(increase);
@@ -12,18 +12,17 @@ console.log(increase);
 // let element = document.getElementById("years").value;
 
 let m, y;
-
 function calculating_balance(y) {
   for (m = 0; m < y; m++) {
-    balance = balance + balance * yearly_interest;
+    balance = +balance + balance * yearly_interest;
     console.log(balance);
     document.write(balance + " </br>");
   }
 }
 
-calculating_balance(4);
+// calculating_balance(4);
 // ---------- prompt method
-// calculating_balance(prompt("Please enter The period in Years"));
+calculating_balance(prompt("Please enter The period in Years"));
 
 // ---------- input tag method
 // calculating_balance();
