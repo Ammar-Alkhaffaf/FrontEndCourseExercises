@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   --------------------------------------------------------  2
+      function computerPlay() {
+        let computerSelection = Math.floor(Math.random() * 3);
+        if (computerSelection == 1) {
+          console.log("Computer selection is Paper");
+          return "paper";
+        } else if (computerSelection == 2) {
+          console.log("Computer selection is Scissors");
+          return "scissors";
+        } else {
+          console.log("Computer selection is Rock");
+          return "rock";
+        }
+      }
+      //   computerPlay();
+
+      // ----------------------------------------------------------- 3
+
+      /* let playerSelection = prompt("Please enter your selection").toLowerCase();
+        let computerSelection = computerPlay();
+
+        function playRound(playerSelection, computerSelection) {
+          if (playerSelection == computerSelection) {
+            console.log("It's a draw, play again");
+            return "Draw";
+          } else if (playerSelection == "rock" && computerSelection == "paper") {
+            console.log("Computer win!, paper beats rock");
+            return "Computer win!, paper beats rock";
+          } else if (playerSelection == "paper" && computerSelection == "rock") {
+            console.log("You win!, paper beats rock");
+            return "You win!, paper beats rock";
+          } else if (
+            playerSelection == "scissors" &&
+            computerSelection == "paper"
+          ) {
+            console.log("You win!, Scissors beats paper");
+            return "You win!, Scissors beats paper";
+          } else if (
+            playerSelection == "paper" &&
+            computerSelection == "scissors"
+          ) {
+            console.log("Computer win!, Scissors beats paper");
+            return "Computer win!, Scissors beats paper";
+          } else if (
+            playerSelection == "scissors" &&
+            computerSelection == "rock"
+          ) {
+            console.log("Computer win!, rock beats scissors");
+            return "Computer win!, rock beats scissors";
+          } else if (
+            playerSelection == "rock" &&
+            computerSelection == "scissors"
+          ) {
+            console.log("You win!, rock beats scissors");
+            return "You win!, rock beats scissors";
+          }
+        }
+        playRound(playerSelection, computerSelection); */
+
+      // ----------------------------------------------------------------------------- 4
+
+      //   let playerSelection = prompt("Please enter your selection").toLowerCase();
+      //   let computerSelection = computerPlay();
+
+      function playRound(playerSelection, computerSelection) {
+        if (playerSelection == computerSelection) {
+          console.log("It's a draw, play again");
+          return "Draw";
+        } else if (playerSelection == "rock" && computerSelection == "paper") {
+          console.log("Computer win!, paper beats rock");
+          return "Computer win";
+        } else if (playerSelection == "paper" && computerSelection == "rock") {
+          console.log("You win!, paper beats rock");
+          return "You win";
+        } else if (
+          playerSelection == "scissors" &&
+          computerSelection == "paper"
+        ) {
+          console.log("You win!, Scissors beats paper");
+          return "You win";
+        } else if (
+          playerSelection == "paper" &&
+          computerSelection == "scissors"
+        ) {
+          console.log("Computer win!, Scissors beats paper");
+          return "Computer win";
+        } else if (
+          playerSelection == "scissors" &&
+          computerSelection == "rock"
+        ) {
+          console.log("Computer win!, rock beats scissors");
+          return "Computer win";
+        } else if (
+          playerSelection == "rock" &&
+          computerSelection == "scissors"
+        ) {
+          console.log("You win!, rock beats scissors");
+          return "You win";
+        }
+      }
+      //   playRound(playerSelection, computerSelection);
+      function game() {
+        let you = 0,
+          computer = 0,
+          draw = 0;
+        for (let i = 0; i < 5; i++) {
+          let result = playRound(
+            prompt("Please enter your selection").toLowerCase(),
+            computerPlay()
+          );
+          if (result == "You win") {
+            you++;
+          } else if (result == "Computer win") {
+            computer++;
+          } else {
+            draw++;
+          }
+        }
+        if (you > computer) {
+          console.log(
+            "You win in total with " +
+              you +
+              " wins and " +
+              draw +
+              " draws and " +
+              computer +
+              " loses"
+          );
+        } else {
+          console.log(
+            "Computer wins in total with " +
+              computer +
+              " wins and " +
+              draw +
+              " draws and " +
+              you +
+              " loses"
+          );
+        }
+      }
+      game();
+    </script>
+  </body>
+</html>
