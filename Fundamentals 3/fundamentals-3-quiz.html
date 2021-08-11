@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let number1 = prompt("Enter your first number");
+      let number2 = prompt("Enter your second number");
+      let number3 = prompt("Enter your 3rd number");
+      // 1) Type of function? Function Declaration
+      function add9(number) {
+        // Your code goes here...
+        number = +number + 9;
+
+        return console.log(number);
+      }
+      add9(number1);
+      //  ------------------------------------------------------------------
+
+      // 2) Type of function? Function Expression
+      const multiplyNum = function (number1, number2) {
+        let product = number1 * number2;
+        return console.log("the product = " + product);
+      };
+      multiplyNum(number1, number2);
+
+      //---------------------------------------------------
+      // 3) Type of function? Arrow Function
+      let string1 = prompt("Please enter your string", "Hello");
+      let capitalizeStr = (string) => {
+        // Your code goes here...
+        let lowerString = string.toLowerCase();
+        let remain = lowerString.slice(1);
+        let firstChar = lowerString.charAt(0);
+        let firstUpper = firstChar.toUpperCase();
+        let combine = firstUpper + remain;
+        return console.log(combine);
+      };
+      capitalizeStr(string1);
+
+      // -----------------------------------------------------
+      // 4) Type of function? Function Declaration
+      function lastLetter(string) {
+        // Your code goes here...
+        let lastLet = string.length;
+        return console.log(string.charAt(lastLet - 1));
+      }
+      lastLetter(string1);
+
+      // ----------------------------------------------------
+      // 5) Type of function? Function Declaration
+      function average(num1, num2, num3) {
+        // Your code goes here...
+        let Average = (+num1 + +num2 + +num3) / 3;
+        return console.log(Average);
+      }
+      average(number1, number2, number3);
+
+      // ---------------------------------------------------------
+      // 6) Type of function? Function Declaration
+      function greaterNum(num1, num2) {
+        // Your code goes here...
+        if (num1 > num2) {
+          return console.log(num1 + " is bigger than " + num2);
+        }
+        return console.log(num2 + " is bigger than " + num1);
+      }
+      greaterNum(number1, number2);
+    </script>
+  </body>
+</html>
