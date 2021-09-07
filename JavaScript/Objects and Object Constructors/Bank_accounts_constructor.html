@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Accounts</title>
+  </head>
+  <body>
+    <script>
+      function Account(name, IBAN) {
+        this.name = name;
+        this.IBAN = IBAN;
+      }
+      let balance = 0;
+      Account.prototype.deposit = function (moneyAmount) {
+        balance += moneyAmount;
+        console.log(balance);
+      };
+
+      Account.prototype.withdraw = function (moneyAmount) {
+        if (moneyAmount > balance) {
+          return "Sorry, Insufficient balance";
+        } else {
+          balance = balance - moneyAmount;
+        }
+      };
+
+      Account.prototype.getBalance = function () {
+        return balance;
+        console.log(balance);
+      };
+      const newAccount1 = new Account("Kostas", "GR00010003");
+    </script>
+  </body>
+</html>
