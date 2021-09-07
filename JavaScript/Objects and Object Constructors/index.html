@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-Objects and Objects constructors</title>
+  </head>
+  <body>
+    <script>
+      function Book(title, author, pages, read, info) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = function () {
+          if (read === true) {
+            return "It's read";
+          } else {
+            return "not read yet";
+          }
+        };
+        this.info = function () {
+          return (
+            this.title +
+            " by " +
+            this.author +
+            ", " +
+            this.pages +
+            " pages, " +
+            this.read()
+          );
+        };
+      }
+
+      let theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", 295, false);
+      console.log(theHobbit.info());
+    </script>
+  </body>
+</html>
