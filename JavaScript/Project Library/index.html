@@ -14,37 +14,8 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <form action="#">
-      <label for="title">Enter the title of your book here </label> <br />
-
-      <input type="text" id="title" class="inputBox" />
-      <br />
-      <br />
-      <label for="author">Enter the author of your book</label> <br />
-
-      <input type="text" id="author" class="inputBox" />
-      <br />
-      <br />
-      <label for="title">Enter the number of pages </label> <br />
-
-      <input type="text" class="inputBox" />
-      <br />
-      <br /><label for="title">Did you read the book ?? </label> <br />
-
-      <input
-        type="text"
-        class="inputBox"
-        placeholder="Answer with true or false"
-      />
-      <br />
-      <br />
-      <label for="button">Press the button to store your data:</label>
-      <br />
-      <button type="button" id="button " class="btn btn-primary">Save</button>
-      <br />
-      <br />
-      <input type="reset" />
-
+    
+      <!-- -------------------------- Card element  -->
       <div class="card" style="width: 18rem">
         <img src="..." class="card-img-top" alt="..." />
         <div class="card-body">
@@ -54,6 +25,87 @@
             bulk of the card's content.
           </p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <!-- //// --------------------------Starting the modal   -->
+
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Add a new book
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Enter the Data of your Book</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+
+              <form action="#">
+                <label for="title">Enter the title of your book here </label> <br />
+          
+                <input type="text" id="title" class="inputBox" />
+                <br />
+                <br />
+                <label for="author">Enter the author of your book</label> <br />
+          
+                <input type="text" id="author" class="inputBox" />
+                <br />
+                <br />
+                <label for="title">Enter the number of pages </label> <br />
+          
+                <input type="text" class="inputBox" />
+                <br />
+                <br /><label for="title">Did you read the book ?? </label> <br />
+          
+                <input
+                  type="text"
+                  class="inputBox"
+                  placeholder="Answer with true or false"
+                />
+                <br />
+                <br />
+                <label for="save">Press the button to store your data:</label>
+                <br />
+                <button type="button" id="Save" class="btn btn-primary" onclick="addBookToLibrary()">Save</button>
+                <br />
+                <br />
+                <input type="reset" />
+
+                </form> 
+
+
+            </div>
+            <!-- <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button> -->
+              
+            </div>
+          </div>
         </div>
       </div>
 

@@ -24,43 +24,10 @@ function Book(title, author, pages, read) {
   };
 }
 
-// --------------------------------------------------------------------------- selecting with querySelector
-// document.querySelector("button").addEventListener("click", function () {
-//   let bookTitle = document.querySelector("#title").value;
-//   let bookAuthor = document.querySelector("#author").value;
-//   let testBooks = [];
-//   testBooks = document.querySelectorAll("input").value;
-//   console.log(bookTitle, bookAuthor, testBooks);
-// });
-
 // -----------------------------------------------------------------------------using querySelectorAll
-// function addBookToLibrary() {
-//   // do stuff here
-
-//   document.querySelector("button").addEventListener("click", function () {
-//     let numberOfInputs = document.querySelectorAll(".inputBox").length;
-//     let inputValues = [];
-//     for (let i = 0; i < numberOfInputs; i++) {
-//       // debugger;
-//       let takingValue = document.querySelectorAll(".inputBox")[i].value;
-//       inputValues.push(takingValue);
-//       console.log(inputValues[i]);
-//     }
-//     console.log(inputValues);
-//   });
-// }
-
-// let book1 = new Book(
-//   inputValues[0],
-//   inputValues[1],
-//   inputValues[2],
-//   inputValues[3]
-// );
-// ----------------------------------------------------------- Another way 😎😎😎
-
-document.querySelector("button").addEventListener("click", addBookToLibrary);
-
 function addBookToLibrary() {
+  // do stuff here
+
   let numberOfInputs = document.querySelectorAll(".inputBox").length;
   let inputValues = [];
   for (let i = 0; i < numberOfInputs; i++) {
@@ -70,8 +37,34 @@ function addBookToLibrary() {
     console.log(inputValues[i]);
   }
   console.log(inputValues);
-  return inputValues;
+  let newElement = document.createElement("div");
+  newElement.innerText = inputValues;
+  newElement.setAttribute("class", "newStyle");
+  document.body.appendChild(newElement);
 }
+
+// let book1 = new Book(
+//   inputValues[0],
+//   inputValues[1],
+//   inputValues[2],
+//   inputValues[3]
+// );
+// ----------------------------------------------------------- Another way 😎😎😎
+
+// document.querySelector("#button").addEventListener("click", addBookToLibrary);
+
+// function addBookToLibrary() {
+//   let numberOfInputs = document.querySelectorAll(".inputBox").length;
+//   let inputValues = [];
+//   for (let i = 0; i < numberOfInputs; i++) {
+//     // debugger;
+//     let takingValue = document.querySelectorAll(".inputBox")[i].value;
+//     inputValues.push(takingValue);
+//     console.log(inputValues[i]);
+//   }
+//   console.log(inputValues);
+//   return inputValues;
+// }
 
 // let book1 = new Book(
 //   inputValues[0],
